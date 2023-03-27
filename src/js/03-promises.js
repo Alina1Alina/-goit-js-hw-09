@@ -43,7 +43,7 @@ function onError(position, delay) {
     const inpStep = Number(refs.inputStep.value);
     const inputAmount = Number(refs.inputAmount.value);
     let stepCounter = inpDelay;
-    for (let i = 1; i < inputAmount; i++) {
+    for (let i = 1; i <= inputAmount; i++) {
       createPromise(i, stepCounter)
         .then(({ position, delay }) => {
           onSucces(position, delay);
